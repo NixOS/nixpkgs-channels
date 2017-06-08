@@ -192,6 +192,25 @@ rec {
     };
   };
 
+  cdt_9_0_1 = buildEclipseUpdateSite rec {
+    name = "cdt-${version}";
+    version = "9.0.1";
+
+    src = fetchzip {
+      stripRoot = false;
+      url = "https://www.eclipse.org/downloads/download.php?r=1&nf=1&file=/tools/cdt/releases/9.0/${name}.zip";
+      sha256 = "0vdx0j9ci533wnk7y17qjvjyqx38hlrdw67z6pi05vfv3r6ys39x";
+    };
+
+    meta = with stdenv.lib; {
+      homepage = https://eclipse.org/cdt/;
+      description = "C/C++ development tooling";
+      license = licenses.epl10;
+      platforms = platforms.all;
+      maintainers = [ maintainers.bjornfor ];
+    };
+  };
+
   checkstyle = buildEclipseUpdateSite rec {
     name = "checkstyle-${version}";
     version = "7.3.0.201612142232";
@@ -484,6 +503,29 @@ rec {
       description = "The Eclipse Visualization Toolkit";
       platforms = platforms.all;
       maintainers = [ maintainers.romildo ];
+    };
+  };
+
+ rustdt = buildEclipseUpdateSite rec {
+    name = "rustdt-${version}";
+    version = "0.6.2";
+
+    src = fetchzip {
+      stripRoot = false;
+      url = "https://github.com/RustDT/rustdt.github.io/archive/master.zip";
+      sha256 = "1k81haikc92myi5ac322j7w40rybxiabcl6ih6b60cw96cgy4ix8";
+      extraPostFetch =
+        ''
+        mv "$out/rustdt.github.io-master/releases/local-repo"/* "$out/"
+        '';
+    };
+
+    meta = with stdenv.lib; {
+      homepage = https://rustdt.github.io/releases/;
+      description = "rust development tooling";
+      license = licenses.epl10;
+      platforms = platforms.all;
+      maintainers = [ maintainers.bjornfor ];
     };
   };
 
