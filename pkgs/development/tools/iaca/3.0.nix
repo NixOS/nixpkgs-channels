@@ -11,7 +11,9 @@ stdenv.mkDerivation {
   unpackCmd = ''${unzip}/bin/unzip "$src"'';
   installPhase = ''
     mkdir -p $out/bin
+    mkdir -p $out/include
     cp iaca $out/bin
+    cp iacaMarks.h $out/include
     patchelf --set-interpreter ${stdenv.glibc}/lib/ld-linux-x86-64.so.2 $out/bin/iaca
   '';
   meta = {
