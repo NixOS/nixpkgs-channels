@@ -8,7 +8,7 @@
 
 
 # UNCOMMENT
-DISK_SSD="/dev/nvme0n1"
+#DISK_SSD="/dev/nvme0n1"
 # OR
 #DISK_HDD="/dev/sda"
 NAME_DIVIDER=""
