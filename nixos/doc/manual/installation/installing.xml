@@ -95,6 +95,11 @@
   <section xml:id="sec-installation-partitioning-UEFI">
    <title>UEFI (GPT)</title>
 
+    <para>You can automate this process with downloading 
+      <link
+  xlink:href="https://nixos.org/nixos/manual/nixos-UEFI-setup.sh">UEFI partitioning and formating script</link> and modifying it based on your disk under /dev.
+    </para>
+    
    <para>
     Here's an example partition scheme for UEFI, using
     <filename>/dev/sda</filename> as the device.
