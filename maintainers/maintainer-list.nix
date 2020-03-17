@@ -4036,6 +4036,11 @@
     github = "laikq";
     name = "Gwendolyn Quasebarth";
   };
+  larusso = {
+    email = "manfred.endres@tslarusso.de";
+    github = "larusso";
+    name = "Manfred Endres";
+  };
   lasandell = {
     email = "lasandell@gmail.com";
     github = "lasandell";
