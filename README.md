@@ -7,6 +7,14 @@
   <a href="https://opencollective.com/nixos"><img src="https://opencollective.com/nixos/tiers/supporter/badge.svg?label=Supporter&color=brightgreen" alt="Open Collective supporters" /></a>
 </p>
 
+# Deprecated!
+
+__This repository existed for historical reasons to prevent nixpkgs contributors from inadvertently clobbering release branches. Now that GitHub offers protected branches, this repository is no longer necessary and you can directly use the main [nixpkgs repo](https://github.com/NixOS/nixpkgs).__
+
+__If you have any references to this as a git remote, the main nixpkgs repo should have the equivalent branch. So for example if you previously had a reference to the branch `nixos-20.03` of this repo, you can redirect that reference to the same named branch (i.e. also `nixos-20.03`) of the main nixpkgs repo.__
+
+__For more information see either [this thread](https://discourse.nixos.org/t/github-com-nixos-nixpkgs-channels-deprecated/9455), [this issue](https://github.com/NixOS/nixpkgs/issues/71176), or [this issue](https://github.com/NixOS/nixpkgs/issues/99257)__
+
 [Nixpkgs](https://github.com/nixos/nixpkgs) is a collection of over
 40,000 software packages that can be installed with the
 [Nix](https://nixos.org/nix/) package manager. It also implements
